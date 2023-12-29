@@ -6,67 +6,7 @@
   --fondoContraste:  rgb(16, 16, 31);
 }
 
-@font-face {
-  font-family: Minecraft;
-  src: url(../fonts/Minecraft.ttf);
-}
-.marca-de-agua{
-  background-color: #fff;
- align-items: center;
- text-align: center;
-  justify-content: space-between;
-  display: flex;
-  margin: 0;
-  padding: 0 20px;
-  font-size: 13px;
-  font-weight: bolder;
-  color: rgb(128,128,128);
-  position: relative;
-  flex-flow: row wrap ;
- 
-  & div{
-    display: flex;
-  margin: 2px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-flow:  row wrap;
-    gap: 10px;
 
-    & p{
-      margin: 0;
-    }
-  }
-  .marca-de-agua__nombre{
-margin: 2px 0 0 0;
-font-family: "ADLaM Display", cursive;
-font-size: 30px;
-text-decoration: none;
-  }
-
-  .marca-de-agua__links{
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    align-self: center;
-    margin-right: 40px;
-
-
-    & li{
-      margin: 0;
-    }
-  }
-
-  & a{
-    color:rgb(128,128,128);
-    transition: .3s;
-
-   &:hover{
-    color: var(--colorPrimario);
-   }
-  }
-
-}
 
 
 
@@ -204,7 +144,6 @@ text-decoration: none;
 
 .main__text{
   font-size: 20px;
-  font-family: Minecraft;
   font-weight: 100;
   display: flex;
   color: #ffffffab;
@@ -342,4 +281,65 @@ align-self: center;
  }
 
  
+}
+
+
+//Marca de agua
+
+.marca-de-agua{
+  background-color: #fff;
+ align-items: center;
+ text-align: center;
+  justify-content: space-between;
+  display: flex;
+  margin: 0;
+  padding: 0 20px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: rgb(128,128,128);
+  position: relative;
+  flex-flow: row wrap ;
+ 
+  & div{
+    display: flex;
+  margin: 2px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-flow:  row wrap;
+    gap: 10px;
+
+    & p{
+      margin: 0;
+    }
+  }
+  .marca-de-agua__nombre{
+margin: 2px 0 0 0;
+font-family: "ADLaM Display", cursive;
+font-size: 30px;
+text-decoration: none;
+  }
+
+  .marca-de-agua__links{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-self: center;
+    margin-right: 40px;
+
+
+    & li{
+      margin: 0;
+    }
+  }
+
+  & a{
+    color:rgb(128,128,128);
+    transition: .3s;
+
+   &:hover{
+    color: var(--colorPrimario);
+   }
+  }
+
 }
