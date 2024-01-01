@@ -1,11 +1,18 @@
 :root{
   --colorPrimario: rgb(0, 255, 128);
+  --colorPrimarioOscuro: rgb(0, 180, 90);
   --fondoNavBar: rgb(22, 22, 39);
   --fondoNavBarContraste:  rgb(16, 16, 31);
   --fondo:  rgb(19,19,29);
-  --fondoContraste:  rgb(16, 16, 31);
+  --fondoContraste:  rgb(23, 23, 46);
+  --importante: rgba(251, 255, 0, 0.562);
+  --error: rgba(255, 63, 63, 0.349);
 }
 
+@font-face {
+  font-family: PressStart2P;
+  src: url(../fonts/PressStart2P.ttf);
+}
 
 
 
@@ -68,6 +75,7 @@
   background-color: var(--fondoNavBarContraste);
   padding: 6px 30px;
   border-radius: 300px;
+
 }
 
 .server-ip__icon {
@@ -101,6 +109,7 @@
   text-align: center;
   animation: infinite alternate 20s aviso;
   gap: 10px;
+  margin-bottom: 100px;
 
   & p{
     margin: 0;
@@ -157,131 +166,7 @@
   margin-right: 80px;
   width: 300px;
 }
-// Animaciones
 
-@keyframes aviso {
-  0% {
-    background-color: (0, 183, 255);
-  }
-
-  25% {
-    background-color: rgb(255, 0, 242);
-  }
-
-  50% {
-    background-color: rgb(0, 183, 255);
-  }
-
-  75% {
-    background-color: rgb(0, 255, 128);
-  }
-
-  100% {
-    background-color: rgb(255, 0, 0);
-  }
-}
-
-@media  (max-width: 706px) {
-  .marca-de-agua{
-    justify-content: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .nav__toggle {
-    display: flex;
-    font-size: 30px;
-    background-color: var(--fondoNavBarContraste);
-    border-radius: 50%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-  
-    & .fa-x{
-      font-size: 20px;
-    }
-  }
-  .nav{
-
-   padding: 0 15px;
-  }
-  .nav__items {
-    height: 0;
-    overflow: hidden;
-    transition: .5s;
-    opacity: 0;
-    z-index: 10;
-    position: absolute;
-    top: 100%;
-    background-color: var(--fondoNavBar);
-    margin: 0;
-    padding: 30px 3px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-   
-    & li:hover{
-    border-bottom: transparent 2px solid;
-   
-    & a{
-      color: var(--colorPrimario);
-    }
-    }
-  }
-  .main__title{
-    font-size: 40px;
-    }
-
-    .visible{
-    
-    height: auto;
-    opacity: 1;
-
-
-    }
-  
-     
-}
-
-@media (max-width: 500px) {
-  .server-ip {
-padding: 15px;
-  .server-ip__icon{
-   padding: 5px;
-   width: 20px;
-  }
-
-    .server-ip__texto{
-      display: none;
-    }
-  }
-
-
-}
-
-
-@media  (max-width: 1040px) {
- .main div{
-  flex-direction: column;
- }
-
- .main__img{
-  width: 250px;
-  margin-top: 50px;
-top: 0;
-left: 17px;
-align-self: center;
- }
-
- .main__text{
-  align-self: center;
- }
-
- 
-}
 
 
 //Marca de agua
@@ -343,3 +228,269 @@ text-decoration: none;
   }
 
 }
+
+
+
+//cards y componetes
+
+
+.section__title{
+ text-align: center;
+  font-size:50px;
+  margin: 100px 20px 50px 20px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.Section{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px  5px 100px 5px;
+  gap:20px;
+}
+.Contenedor__card{
+  height: 570px;
+  display: flex;
+  align-items: center;
+  width: min(400px, 95%);
+}
+.Contenedor{
+ 
+  background: var(--fondoContraste);
+ position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   
+  padding: 30px;
+  padding-top: 100px;
+  border-radius: 1rem;
+  border: #ffffff69 2px solid;
+ 
+
+  &__title{
+
+    font-size: 60px;
+    margin: 0;
+    margin-top: 80px;
+   
+  }
+
+  &__description{
+    align-self: flex-start;
+    opacity: 0.6;
+    margin: 0;
+    
+  }
+  &__img{
+    
+    position: absolute;
+    top: -60px;
+    width: 200px;
+  }
+
+  &__boton{
+    cursor: pointer;
+    margin-top: 30px;
+    background: var(--colorPrimario);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.3s;
+
+    &:hover{
+      background: var(--colorPrimarioOscuro);
+    }
+
+    &:active{
+      transform: scale(0.9);
+    }
+  }
+}
+
+
+.Noticias{
+  border: dashed 3px #ffffff54;
+  background: var(--fondoContraste);
+  box-sizing: border-box;
+  width: min(400px, 340px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 30px;
+  border-radius: 1.5rem;
+
+  &__title{
+    margin: 0;
+    font-size: 50px;
+  }
+
+  &__description{
+    opacity: 0.7;
+  }
+}
+
+.Noticias--importante{
+  background: var(--importante);
+}
+
+.Noticias--error{
+  background: var(--error);
+}
+
+
+.Slider-Container{
+  overflow: hidden;
+
+
+}
+
+.Slider{
+
+  padding: 0 7px;
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  box-sizing: border-box;
+  gap: 10px;
+  cursor: grab;
+}
+// Animaciones
+
+@keyframes aviso {
+  0% {
+    background-color: (0, 183, 255);
+  }
+
+  25% {
+    background-color: rgb(255, 0, 242);
+  }
+
+  50% {
+    background-color: rgb(0, 183, 255);
+  }
+
+  75% {
+    background-color: rgb(0, 255, 128);
+  }
+
+  100% {
+    background-color: rgb(255, 0, 0);
+  }
+}
+
+@media  (max-width: 706px) {
+  .marca-de-agua{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+
+
+  .nav__toggle {
+    display: flex;
+    font-size: 30px;
+    background-color: var(--fondoNavBarContraste);
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  
+    & .fa-x{
+      font-size: 20px;
+    }
+  }
+  .nav{
+
+   padding: 0 15px;
+  }
+  .nav__items {
+    height: 0;
+    overflow: hidden;
+    transition: .5s;
+    opacity: 0;
+    z-index: 10;
+    position: absolute;
+    top: 100%;
+    background-color: var(--fondoNavBar);
+    margin: 0;
+    padding: 30px 3px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+   
+    & li:hover{
+    border-bottom: transparent 2px solid;
+   
+    & a{
+      color: var(--colorPrimario);
+    }
+    }
+  }
+  .main__title{
+    font-size: 40px;
+    }
+
+    .visible{
+    
+    height: auto;
+    opacity: 1;
+
+
+    }
+
+
+    .Contenedor__card{
+      height: 650px;
+    }
+  
+     
+}
+
+@media (max-width: 500px) {
+  .server-ip {
+padding: 15px;
+  .server-ip__icon{
+   padding: 5px;
+   width: 20px;
+  }
+
+    .server-ip__texto{
+      display: none;
+    }
+  }
+
+
+}
+
+
+@media  (max-width: 1040px) {
+ .main div{
+  flex-direction: column;
+ }
+
+ .main__img{
+  width: 250px;
+  margin-top: 50px;
+top: 0;
+left: 17px;
+align-self: center;
+ }
+
+ .main__text{
+  align-self: center;
+ }
+
+ 
+}
+
+

@@ -1,5 +1,12 @@
 import "./assets/stylesheet/App.scss";
 import React, { useState } from "react";
+import CardModalidad from "./assets/components/CardModalida.jsx";
+import Titulo from "./assets/components/Titulo.jsx";
+import Noticia from "./assets/components/Noticia.jsx";
+
+import { motion } from 'framer-motion';
+
+
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +17,6 @@ function App() {
 
   return (
     <>
-
-  
       <nav className="nav">
         <h1 className="nav__title">TempCat</h1>
 
@@ -22,9 +27,7 @@ function App() {
           <li>
             <a href="#">Eventos</a>
           </li>
-          <li>
-            <a href="#">Equipo</a>
-          </li>
+          
           <li>
             <a href="https://discord.gg/FkSPDY26cV">Soporte</a>
           </li>
@@ -43,40 +46,116 @@ function App() {
           <i className={`fa-solid ${isOpen ? "fa-x" : "fa-bars"}`}></i>
         </span>
       </nav>
-    
+
       <header className="aviso">
         <p className="aviso__text">
           ¿Aun no te has unido a nuestro servidor de Discord?
         </p>
-     <a href="#">  <button className="aviso__boton">Discord</button></a>
+        <a href="#">
+          {" "}
+          <button className="aviso__boton">Discord</button>
+        </a>
       </header>
 
-      <main className="main">
-        <h1 className="main__title">Mantenimiento</h1>
-        <div>
-        <p className="main__text">
-          ¡Bienvenido a TempCat, un servidor de Minecraft lleno de diversión y
-          socialización! Actualmente estamos en mantenimiento para mejorar tu
-          experiencia de juego. Agradecemos tu paciencia y estamos emocionados
-          por las mejoras que estamos implementando. ¡Nos vemos pronto en
-          TempCat!
-        </p>
+      <Titulo Titulo="Ultimas Noticias" />
 
-        <img className="main__img" src="img/Steve.png" alt="Steve"/>
-        </div>
-      </main>
+<motion.div className="Slider-Container">
+<motion.div className="Slider" drag="x" dragConstraints={{  right: 0}}>
+<div>
+<Noticia
+          Titulo="Reinico"
+          Descripcion="
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate error sit illo. Excepturi, suscipit placeat aliquid odit consequuntur natus eum perferendis delectus corrupti repudiandae. Quaerat pariatur fugiat ea laudantium aliquid.
+
+        "
+          Clase="error"
+        />
+</div>
+
+<div>
+<Noticia
+          Titulo="Regalos"
+          Descripcion="
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate error sit illo. Excepturi, suscipit placeat aliquid odit consequuntur natus eum perferendis delectus corrupti repudiandae. Quaerat pariatur fugiat ea laudantium aliquid.
+
+        "
+          Clase=""
+        />
+</div>
+
+<div>
+<Noticia
+          Titulo="Mejoras"
+          Descripcion="
+   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate error sit illo. Excepturi, suscipit placeat aliquid odit consequuntur natus eum perferendis delectus corrupti repudiandae. Quaerat pariatur fugiat ea laudantium aliquid.
+
+        "
+          Clase="importante"
+        />
+</div>
+
+</motion.div>
+</motion.div>
+
+      <Titulo Titulo="Modalidades" />
+
+      <div className="Section">
+        <CardModalidad
+          Titulo="Survival"
+          Descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat voluptatem incidunt nesciunt delectus possimus quae explicabo, alias obcaecati consectetur hic rerum eveniet tenetur id dolore quidem commodi sapiente qui!"
+          Imagen="Steve"
+        />
+
+        <CardModalidad
+          Titulo="Skywars"
+          Descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat voluptatem incidunt nesciunt delectus possimus quae explicabo, alias obcaecati consectetur hic rerum eveniet tenetur id dolore quidem commodi sapiente qui!"
+          Imagen="Steve"
+        />
+
+        <CardModalidad
+          Titulo="Bedwars"
+          Descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat voluptatem incidunt nesciunt delectus possimus quae explicabo, alias obcaecati consectetur hic rerum eveniet tenetur id dolore quidem commodi sapiente qui!"
+          Imagen="Steve"
+        />
+
+        <CardModalidad
+          Titulo="PvP"
+          Descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat voluptatem incidunt nesciunt delectus possimus quae explicabo, alias obcaecati consectetur hic rerum eveniet tenetur id dolore quidem commodi sapiente qui!"
+          Imagen="Steve"
+        />
+
+        <CardModalidad
+          Titulo="Creative"
+          Descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, placeat voluptatem incidunt nesciunt delectus possimus quae explicabo, alias obcaecati consectetur hic rerum eveniet tenetur id dolore quidem commodi sapiente qui!"
+          Imagen="Steve"
+        />
+      </div>
 
       <div className="marca-de-agua">
-       <div>
-        <a href="https://revay3d.github.io/revaydev/" className="marca-de-agua__nombre">Revaydev</a>
-      <p> La interfaz y programacion fue hecha por RevayDev. </p>
-      </div>
-      
+        <div>
+          <a
+            href="https://revay3d.github.io/revaydev/"
+            className="marca-de-agua__nombre"
+          >
+            Revaydev
+          </a>
+          <p> La interfaz y programacion fue hecha por RevayDev. </p>
+        </div>
+
         <ul className="marca-de-agua__links">
-          <li><a href="mailto:revaydev17.gmail.com">Soporte</a></li> | <li><a href="https://discord.com/users/1066481602403766313">Discord</a></li> | <li><a href="https://revay3d.github.io/revaydev/">Portafolio</a></li>
+          <li>
+            <a href="mailto:revaydev17.gmail.com">Soporte</a>
+          </li>
+          |
+          <li>
+            <a href="https://discord.com/users/1066481602403766313">Discord</a>
+          </li>
+          |
+          <li>
+            <a href="https://revay3d.github.io/revaydev/">Portafolio</a>
+          </li>
         </ul>
-    
-    </div>
+      </div>
     </>
   );
 }
