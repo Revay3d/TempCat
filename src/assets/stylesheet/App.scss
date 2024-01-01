@@ -318,7 +318,7 @@ text-decoration: none;
   border: dashed 3px #ffffff54;
   background: var(--fondoContraste);
   box-sizing: border-box;
-  width: min(400px, 340px);
+  width:500px;
   flex-direction: column;
   justify-content: center;
   align-items: start;
@@ -392,6 +392,9 @@ text-decoration: none;
 
 @media (max-width: 900px) {
 
+  .Noticias{
+    width: 345px;
+  }
 
   .nav__toggle {
     display: flex;

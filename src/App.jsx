@@ -60,7 +60,7 @@ function App() {
       <Titulo Titulo="Ultimas Noticias" />
 
 <motion.div className="Slider-Container">
-<motion.div className="Slider" drag="x" dragConstraints={{  right: 0}}>
+<motion.div className="Slider" drag="x" dragConstraints={{  right: 0, left: -710}}>
 <div>
 <Noticia
           Titulo="Reinico"

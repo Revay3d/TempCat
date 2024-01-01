@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Titulo(props) {
+export default function Titulo(Titulo) {
   return (
-    <h1 className="section__title">{props.Titulo}</h1>
+    <h1 className="section__title">{Titulo}</h1>
   )
 }
