@@ -5,7 +5,7 @@
   --fondoNavBarContraste:  rgb(16, 16, 31);
   --fondo:  rgb(19,19,29);
   --fondoContraste:  rgb(23, 23, 46);
-  --importante: rgba(251, 255, 0, 0.562);
+  --importante: rgba(251, 255, 0, 0.418);
   --error: rgba(255, 63, 63, 0.349);
 }
 
@@ -192,7 +192,7 @@
     text-align: center;
     justify-content: center;
     flex-flow:  row wrap;
-    gap: 10px;
+    gap: 7px;
 
     & p{
       margin: 0;
@@ -200,7 +200,7 @@
   }
   .marca-de-agua__nombre{
 margin: 2px 0 0 0;
-font-family: "ADLaM Display", cursive;
+font-family:  Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 font-size: 30px;
 text-decoration: none;
   }
@@ -230,23 +230,46 @@ text-decoration: none;
 }
 
 
+.footer{
+  margin: 0;
+  padding: 30px;
+  background: var(--fondoContraste);
+
+  &__text{
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  &__text--mojang{
+    font-size: 22px;
+    opacity: 0.6;
+    font-weight: 400;
+  }
+}
 
 //cards y componetes
 
 
-.section__title{
+.Title{
  text-align: center;
-  font-size:50px;
-  margin: 100px 20px 50px 20px;
+  font-size:70px;
+  margin: 100px 20px 17px 20px;
   line-height: 50px;
   font-weight: bold;
+}
+
+.Descripcion{
+  opacity: 0.6;
+  font-size: 20px;
+  margin: 0 20px 70px 30px;
 }
 
 .Section{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-around;
   padding: 10px  5px 100px 5px;
   gap:20px;
 }
@@ -319,6 +342,7 @@ text-decoration: none;
   background: var(--fondoContraste);
   box-sizing: border-box;
   width:500px;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: start;
@@ -353,12 +377,130 @@ text-decoration: none;
 .Slider{
 
   padding: 0 7px;
-  align-items: center;
-  justify-content: start;
+
   display: flex;
   box-sizing: border-box;
   gap: 10px;
   cursor: grab;
+}
+
+
+
+
+
+.Informacion{
+  display: flex;
+  
+  justify-content:space-around;
+  flex-flow: row wrap-reverse;
+  padding: 2px;
+  align-items: center;
+  margin-bottom: 100px;
+
+  & img{
+    width: 300px;
+    border-radius: 1.5rem;
+    border: #fff 5px solid;
+  }
+
+  &__interior{
+  
+    align-self: start;
+
+    justify-content: center;
+    width: min(630px, 90% );
+
+  }
+
+  
+  
+  .interior__links{
+    padding: 10px 20px;
+    transition: 0.3s;
+    background: var(--fondoContraste);
+    border: dashed 3px #ffffff54;
+    border-radius: 1.5rem;
+    right: 0;
+    justify-content: space-around;
+    font-size: 25px;
+    display: flex;
+    gap: 25px;
+
+  &:hover{
+    border: dashed 3px var(--colorPrimario);
+  }  
+
+  & i{
+    opacity: 0.8;
+    transition: 0.3s;
+
+    &:hover{
+      transform: scale(0.9);
+      cursor: pointer;
+      opacity: 1;
+     color: var(--colorPrimario);
+    }
+  }
+
+   
+    
+  }
+}
+
+
+
+.interior__title{
+  margin: 0 0 10px 0;
+  font-size: 70px;
+  text-decoration:underline;
+}
+
+.interior__description{
+  opacity: 0.6;
+}
+
+.Informacion__imagen{
+position: relative;
+bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+
+.Contenedor--crear{
+  opacity: 0.5;
+  padding-top: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  height: 450px;
+  justify-content: left;
+
+  &:hover{
+    opacity: 1;
+  }
+}
+
+.Crear__title{
+  font-size: 50px;
+  align-self: self-start;
+  margin: 0;
+}
+
+.Crear__description{
+
+  margin: 0;
+  opacity: 0.6;
+
+}
+
+.Crear__icon{
+  
+  align-self: center;
+  font-size: 150px;
+  opacity: 0.5;
 }
 // Animaciones
 
@@ -391,6 +533,21 @@ text-decoration: none;
 }
 
 @media (max-width: 900px) {
+
+  .Title{
+    text-align: center;
+     font-size:40px;
+     margin: 100px 20px 0x 20px;
+     line-height: 50px;
+     font-weight: bold;
+   }
+   
+   .Descripcion{
+     opacity: 0.6;
+     font-size: 15px;
+     margin: 0 20px 70px 30px;
+   }
+
 
   .Noticias{
     width: 345px;
