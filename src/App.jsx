@@ -11,7 +11,7 @@ export default function App() {
    <div>
  <Nav />
     <Routes>
-    <Route path="/" element={<Inicio />} exact />
+    <Route path="/TempCat/" element={<Inicio />} exact />
     <Route path="/Eventos" element={<Error />} exact />
     <Route path='*' element={<Error />} />
          </Routes>

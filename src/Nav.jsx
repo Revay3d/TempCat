@@ -15,7 +15,7 @@ export default function Layout() {
 
         <ul className={`nav__items ${isOpen ? "visible" : ""}`}>
           <li>
-            <Link to="/">Inicio</Link>
+            <Link to="/TempCat/">Inicio</Link>
           </li>
           <li>
             <Link to="/Eventos">Eventos</Link>
