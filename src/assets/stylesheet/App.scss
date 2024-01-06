@@ -616,7 +616,46 @@ bottom: 25px;
      
 }
 
+.Error{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5rem auto;
+  padding: 40px;
+  width: min(700px, 80% );
+  border-radius: 1.5rem;
+  text-align: center;
+  background: var(--fondoContraste);
+
+  &__title{
+    font-size: 120px;
+    margin: 0;
+ opacity: 0.7;
+  }
+
+  &__description{
+    margin: 0;
+    font-size: 20px;
+   opacity: 0.7;
+  }
+&__button{
+  margin-top: 20px;
+  background: var(--fondo);
+}
+}
+
 @media (max-width: 500px) {
+.Error{
+  padding: 20px 11px;
+}
+  .Error__title{
+    font-size: 70px;
+  }
+
+  .Error__description{
+    font-size: 13px;
+  }
   .server-ip {
 padding: 15px;
   .server-ip__icon{
