@@ -628,7 +628,7 @@ bottom: 25px;
   border-radius: 1.5rem;
   text-align: center;
   background: var(--fondoContraste);
-position: relative; 
+position: relative;
 
   &__title{
     font-size: 120px;
@@ -642,7 +642,7 @@ position: relative;
    opacity: 0.7;
   }
 &__button{
-position: absuluto;
+position: absolute;
   top: 20px;
   background: var(--fondo);
 }
