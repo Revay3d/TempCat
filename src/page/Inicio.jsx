@@ -46,7 +46,7 @@ export default function Inicio() {
         <div className="Informacion__imagen">
           <img src="img/TempCat.jpg" alt="TempCat" />
           <div className="interior__links">
-            <a href="https://discord.gg/FkSPDY26cV">
+            <a href="#">
             <i className="fa-brands fa-discord"></i>
             </a>{" "}
             <i className="fa-brands fa-tiktok"></i>{" "}
@@ -91,7 +91,8 @@ export default function Inicio() {
       <div className="Section">
         <CardModalidad
           Titulo="Survival"
-          Descripcion="¡Bienvenido al modo de supervivencia de nuestro servidor de Minecraft! Aquí, cada bloque debe ser ganado trabajando duro. Recolecta recursos, construye tu refugio, gestiona tu hambre y lucha contra los enemigos que aparecen en la oscuridad. ¿Podrás prosperar en este mundo abierto y superar los desafíos que te esperan? ¡Únete a nosotros y descúbrelo!"
+          Descripcion="¡Bienvenido al modo de supervivencia de nuestro servidor de Minecraft! Aquí, cada bloque debe ser ganado trabajando duro. Recolecta recursos, construye tu refugio, gestiona tu hambre y lucha contra los enemigos que aparecen en la oscuridad. 
+          "
           Imagen="Steve"
         />
 

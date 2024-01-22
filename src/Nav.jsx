@@ -22,7 +22,7 @@ export default function Layout() {
           </li>
 
           <li>
-            <a href="https://discord.gg/FkSPDY26cV">Soporte</a>
+            <a href="#">Soporte</a>
           </li>
         </ul>
         <div className="server-ip">
